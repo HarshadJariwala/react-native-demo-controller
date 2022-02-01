@@ -1,12 +1,29 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { useState } from 'react';
+import { SearchBar } from 'react-native-elements';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Searchbarscreen = () => {
+    const [search, setSearch] = useState("");
+
+    const updateSearch = (search) => {
+        setSearch(search);
+    };
+
     return (
-        <View>
-            <Text></Text>
+        <View style={styles.view}>
+            <SearchBar
+                placeholder="Type Here..."
+                onChangeText={updateSearch}
+                value={search}
+            />
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    view: {
+        margin: 10,
+    },
+});
 
 export default Searchbarscreen;

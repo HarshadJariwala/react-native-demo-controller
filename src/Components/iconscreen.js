@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 const Iconscreen = () => {
     return (
         <View>
-            <Text></Text>
+            <Text> Icon screen</Text>
         </View>
     )
 }
